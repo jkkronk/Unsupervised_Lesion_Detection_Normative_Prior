@@ -4,3 +4,7 @@ Train data loaded
 Valid data loaded
 Start training:
 Epoch: 0
+Traceback (most recent call last):
+  File "run_train_vae.py", line 75, in <module>
+    epoch, l2_loss, lat_loss, loss))
+TypeError: not enough arguments for format string

@@ -1,0 +1,12 @@
+Using device: cuda:0
+Loading data...
+Train data loaded
+Valid data loaded
+Start training:
+Epoch: 0
+epoch 0: train_l2_loss 101.503970 train_lat_loss 26.312988 total train_loss 127.816958
+epoch 0: test_l2_loss 104.851479 test_lat_loss 12.603146 total loss 117.454625
+Traceback (most recent call last):
+  File "run_train_vae.py", line 100, in <module>
+    img_re, __, __, __ = vae_model(img_test.double())
+ValueError: not enough values to unpack (expected 4, got 3)

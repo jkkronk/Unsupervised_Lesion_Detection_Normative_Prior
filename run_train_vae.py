@@ -71,10 +71,10 @@ if __name__ == "__main__":
         # Cosine annealing
         #scheduler.step()
 
-        print(("epoch %d: train_gen_loss %f train_lat_loss %f train_res_loss %f total train_loss %f") % (
+        print(("epoch %d: train_l2_loss %f train_lat_loss %f total train_loss %f") % (
                     epoch, l2_loss, lat_loss, loss))
 
-        print(("epoch %d: test_gen_loss %f test_lat_loss %f res_loss %f total loss %f") % (
+        print(("epoch %d: test_l2_loss %f test_lat_loss %f total loss %f") % (
             epoch, valid_l2_loss, valid_lat_loss, valid_loss))
 
         # Write to Tensorboard
@@ -97,7 +97,7 @@ if __name__ == "__main__":
 
             img_test, mask = next(iter(valid_data_loader))
             img_test = img_test.to(device)
-            img_re, __, __, __ = vae_model(img_test.double())
+            img_re, __, __ = vae_model(img_test.double())
             writer_valid.add_image('Batch of original images', img_test, epoch, dataformats='NCHW')
             writer_valid.add_image('Batch of reconstructed images', torch.clamp(img_re, 0, 1), epoch, dataformats='NCHW')
 
