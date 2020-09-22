@@ -1,0 +1,7 @@
+epochs: 300
+batch_size: 32
+spatial_size: 128
+log_freq: 20
+lr_rate: 1e-3
+log_dir: /scratch_net/bmicdl03/jonatank/logs/VAE_CamCAN_Unsupervised/
+path: /scratch_net/bmicdl03/jonatank/data/CamCAN/T2w/

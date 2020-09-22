@@ -1,0 +1,19 @@
+Using device: cuda:0
+Loading data...
+Train data loaded
+Valid data loaded
+Start training:
+Epoch: 0
+Traceback (most recent call last):
+  File "train_vae.py", line 67, in <module>
+    loss, lat_loss, l2_loss = train_vae(vae_model, train_data_loader, device, optimizer, epoch)
+  File "/scratch_net/bmicdl03/jonatank/code/Unsupervised_Lesion_Detection_Normative_Prior/model/ConvVAE.py", line 236, in train_vae
+    loss = torch.sum(lat_loss, rec_loss) # Sum Latent loss and Reconstruction loss
+TypeError: sum() received an invalid combination of arguments - got (Tensor, Tensor), but expected one of:
+ * (Tensor input)
+ * (Tensor input, torch.dtype dtype)
+      didn't match because some of the arguments have invalid types: (Tensor, !Tensor!)
+ * (Tensor input, tuple of ints dim, torch.dtype dtype, Tensor out)
+ * (Tensor input, tuple of ints dim, bool keepdim, torch.dtype dtype, Tensor out)
+ * (Tensor input, tuple of ints dim, bool keepdim, Tensor out)
+
